@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #000;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+.backvid {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    opacity: 0.4;
+}
+
+.site-header {
+    position: sticky;
+    top: 0;
+    background-color: #111;
+    padding: 20px 100px;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.site-header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+    text-shadow: 0 0 5px purple;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: #a020f0;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-links a:hover {
+    color: white;
+}
+
+.projects {
+    margin-top: 60px;
+    width: 100%;
+    padding: 60px 100px;
+    
+}
+
+.section-title {
+    text-align: center;
+    font-size: 45px;
+    margin-bottom: 40px;
+    color: white;
+    text-shadow: 0 0 10px purple;
+}
+
+.project-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+}
+
+.project-card {
+    background: #1a1a1a;
+    border: 2px solid purple;
+    border-radius: 20px;
+    padding: 30px;
+    width: 300px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    box-shadow: 0 8px 15px rgba(160, 32, 240, 0.2);
+}
+
+.project-card h3 {
+    margin-bottom: 10px;
+    font-size: 24px;
+    color: #ffffff;
+}
+
+.project-card p {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #ccc;
+}
+
+.project-card a {
+    color: #a020f0;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.project-card a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+.project-card:hover {
+    transform: scale(1.05) rotateZ(0.5deg);
+    box-shadow: 0 15px 25px rgba(160, 32, 240, 0.5);
+}
+
+
+@media (max-width: 600px) {
+    .site-header {
+        padding: 20px;
+    }
+
+    .projects {
+        padding: 40px 20px;
+    }
+
+    .project-card {
+        width: 100%;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
